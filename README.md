@@ -51,6 +51,6 @@ The program will output a .GCM image file separate from the input file, which wi
 
 The key is possible to dump from original media, as shown by MrSporty here: https://www.youtube.com/watch?v=d8HEEAMlYIg (archive: https://web.archive.org/web/20211013195041/https://www.youtube.com/watch?v=d8HEEAMlYIg)
 
-One could find a key online in a small number of places, including the aforementioned website (or its archive) and MAME on Github!
+One could find a key online in a small number of places, including the aforementioned website (or its archive) and here: http://www.citylan.it/wiki/index.php/Naomi_-_Chihiro_-_Triforce
 
 Helpful tip: often times, the key is the same between different regions of a given game, for example the Japanese and English versions of Mario Kart Arcade GP 2 share the same key. Additionally, "many of the update discs actually use keys from some other games". If one key doesn't work, keep trying multiple keys because another one may work instead.
