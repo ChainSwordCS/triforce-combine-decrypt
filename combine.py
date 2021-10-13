@@ -1,7 +1,7 @@
 import os, sys, struct
 
-fs = [open(x) for x in sys.argv[1:9]]
-blockmap = struct.unpack("<262144H", open(sys.argv[9]).read())
+fs = [open(x, "rb") for x in sys.argv[1:9]]
+blockmap = struct.unpack("<262144H", open(sys.argv[9], "rb").read())
 
 out = open(sys.argv[10], "wb")
 

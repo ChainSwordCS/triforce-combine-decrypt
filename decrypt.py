@@ -59,6 +59,7 @@ def findkey(file, keys):
 	des = None
 	pattern = patterns[-1][1][::-1]
 	for key in keys:
+		print(key)
 		d = DES.new(key[::-1], DES.MODE_ECB)
 		if d.decrypt(pattern) == "\0" * 8:
 			return d, key
@@ -69,7 +70,8 @@ def findkey(file, keys):
 keys = loadkeys(sys.argv[2])
 
 # find correct key
-(des, key) = findkey(file, keys)
+key = "CEA2131991982F2A".decode("hex")
+des = DES.new(key[::-1], DES.MODE_ECB)
 assert des is not None, "no key found :("
 
 print "ok, found key %s" % hex(key)
