@@ -31,8 +31,6 @@ for i in blockmap:
 		s2 = f[1].read(0x10)
 		if len(r1) != 0x200:
 			raise Exception("illegal pos! %08x %02x" % (real_pos, i))
-		if ord(s1[5]) or ord(s2[5]):
-			raise Exception("all-ff %08x %02x" % (real_pos, i))
 		res = ''.join(r1[i] + r2[i] for i in range(0x200))
 		out.write(res)
 		if not (ind & 0xFFFF):

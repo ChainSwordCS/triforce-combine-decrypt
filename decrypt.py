@@ -19,9 +19,11 @@
 
 from Crypto.Cipher import DES
 import sys
+import os.path
+from os import path
 
 if len(sys.argv) != 3:
-	print "Usage: %s <main image file> <key-url>"
+	print "Usage: %s <main image file> <key>"
 	exit()
 
 def hex(string):
@@ -66,11 +68,11 @@ def findkey(file, keys):
 
 	return None, None
 
-# Load keys
-keys = loadkeys(sys.argv[2])
-
 # find correct key
-key = "CEA2131991982F2A".decode("hex")
+if path.exists(sys.argv[2]):
+	key = open(sys.argv[2], "r").read()
+else:
+	key = sys.argv[2].decode("hex")
 des = DES.new(key[::-1], DES.MODE_ECB)
 assert des is not None, "no key found :("
 
